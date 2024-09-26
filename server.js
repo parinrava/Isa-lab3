@@ -27,6 +27,8 @@ class Server{
     
 }
 
+
+
 handleRequest(req,res){
     const  queryObject = url.parse(req.url, true).query;
 
