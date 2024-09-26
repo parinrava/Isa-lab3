@@ -30,7 +30,7 @@ class Server{
 handleRequest(req,res){
     const  queryObject = url.parse(req.url, true).query;
 
-    if (req.url.startWith('/') && queryObject.name){
+    if (req.url.startsWith('/') && queryObject.name){
         const name = queryObject.name;
         const currentDateTime = this.serverUtils.getDate();
         
