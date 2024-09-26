@@ -20,9 +20,11 @@ class Server{
 
     });
     
-    server.listen(3000, ()  => {
-        console.log('Server is running on port 3000');
+    const port = process.env.PORT || 3000; // Default to 3000 if process.env.PORT is not defined
+    server.listen(port, () => {
+        console.log(`Server running on port ${port}`);
     });
+    
 }
 
 handleRequest(req,res){
